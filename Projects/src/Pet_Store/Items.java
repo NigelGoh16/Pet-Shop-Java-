@@ -1,5 +1,5 @@
 package Pet_Store;
 
-public class Store {
+public class Items {
 
 }
