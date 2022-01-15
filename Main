@@ -6,11 +6,26 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		String name;
+		double sum; 
 		Dogg Dogg = new Dogg();
-		Catt Catt = new Catt();
+		Dogg DP1 = new Dogg();
+		Dogg DP2 = new Dogg();
+		Dogg DP3 = new Dogg();
+		Dogg DS1 = new Dogg();
+		Dogg DS2 = new Dogg();
+		Dogg DS3 = new Dogg();
 		Service dog = new Service();
-		Service cat =new Service();
 		
+		Catt Catt = new Catt();	
+		Catt CP1 = new Catt();		
+		Catt CP2 = new Catt();		
+		Catt CP3 = new Catt();		
+		Catt CS1 = new Catt();		
+		Catt CS2 = new Catt();		
+		Catt CS3 = new Catt();	
+		Service cat =new Service();
+				
+				
 		name = showInputDialog("Enter your name:");
 		showMessageDialog(null, "Hi " + name);
 		System.out.println("Customer name: " + name);
@@ -23,6 +38,10 @@ public class Main {
 		dog.setGroom("Yes");
 		dog.setVet("No");
 		dog.setBreed("No");
+		Dogg.set(10);
+		Dogg.setPrice(sum);
+		
+		sum = 
 		
 		Catt.setFood("No");
 		Catt.setBowl("No");
@@ -31,13 +50,14 @@ public class Main {
 		cat.setVet("Yes");
 		cat.setBreed("No");
 		
-		System.out.println("Dog Size : " + Dogg.getSize());
+		System.out.println("Dog Size : " + Dogg.getSize());		
 		System.out.println("Dog Product - Food: " + Dogg.getFood());
 		System.out.println("            - Bowl: " + Dogg.getBowl());
 		System.out.println("            - Fetch: " + Dogg.getFetch());
 		System.out.println("Dog Service - Groom: " + dog.getGroom());
 		System.out.println("            - Vet: " + dog.getVet());
 		System.out.println("            - Breed: " + dog.getBreed());
+		
 		
 		System.out.println("\n");
 		
