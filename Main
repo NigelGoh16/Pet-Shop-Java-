@@ -1,0 +1,46 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Dogg Dogg = new Dogg();
+		Catt Catt = new Catt();
+		Service dog = new Service();
+		Service cat =new Service();
+		
+		Dogg.setSize("Medium");
+		Dogg.setFood("No");
+		Dogg.setBowl("No");
+		Dogg.setFetch("Yes");
+		dog.setGroom("Yes");
+		dog.setVet("No");
+		dog.setBreed("No");
+		
+		Catt.setFood("No");
+		Catt.setBowl("No");
+		Catt.setToy("Yes");
+		cat.setGroom("No");
+		cat.setVet("Yes");
+		cat.setBreed("No");
+		
+		System.out.println("Dog Size : " + Dogg.getSize());
+		System.out.println("Dog Product - Food: " + Dogg.getFood());
+		System.out.println("            - Bowl: " + Dogg.getBowl());
+		System.out.println("            - Fetch: " + Dogg.getFetch());
+		System.out.println("Dog Service - Groom: " + dog.getGroom());
+		System.out.println("            - Vet: " + dog.getVet());
+		System.out.println("            - Breed: " + dog.getBreed());
+		
+		System.out.println("\n");
+		
+		System.out.println("Cat Product - Food: " + Catt.getFood());
+		System.out.println("            - Bowl: " + Catt.getBowl());
+		System.out.println("            - Toy: " + Catt.getToy());
+		System.out.println("Cat Service - Groom: " + cat.getGroom());
+		System.out.println("            - Vet: " + cat.getVet());
+		System.out.println("            - Breed: " + cat.getBreed());
+		
+	}
+
+}
