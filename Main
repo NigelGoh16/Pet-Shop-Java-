@@ -6,28 +6,30 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		String name;
-		double sum; 
+		double sum_D;
+		double sum_C;
+		double sum_Total;
 		Dogg Dogg = new Dogg();
-		Dogg DP1 = new Dogg();
-		Dogg DP2 = new Dogg();
+		//Dogg DP1 = new Dogg();
+		//Dogg DP2 = new Dogg();
 		Dogg DP3 = new Dogg();
 		Dogg DS1 = new Dogg();
-		Dogg DS2 = new Dogg();
-		Dogg DS3 = new Dogg();
+		//Dogg DS2 = new Dogg();
+		//Dogg DS3 = new Dogg();
 		Service dog = new Service();
 		
 		Catt Catt = new Catt();	
-		Catt CP1 = new Catt();		
-		Catt CP2 = new Catt();		
+		//Catt CP1 = new Catt();		
+		//Catt CP2 = new Catt();		
 		Catt CP3 = new Catt();		
-		Catt CS1 = new Catt();		
+		//Catt CS1 = new Catt();		
 		Catt CS2 = new Catt();		
-		Catt CS3 = new Catt();	
+		//Catt CS3 = new Catt();	
 		Service cat =new Service();
 				
 				
 		name = showInputDialog("Enter your name:");
-		showMessageDialog(null, "Hi " + name);
+		showMessageDialog(null, "Welcome " + name);
 		System.out.println("Customer name: " + name);
 		
 		
@@ -38,10 +40,10 @@ public class Main {
 		dog.setGroom("Yes");
 		dog.setVet("No");
 		dog.setBreed("No");
-		Dogg.set(10);
-		Dogg.setPrice(sum);
+		DP3.setPrice(10);
+		DS1.setPrice(50);
 		
-		sum = 
+		sum_D = DP3.getPrice() + DS1.getPrice();
 		
 		Catt.setFood("No");
 		Catt.setBowl("No");
@@ -49,6 +51,14 @@ public class Main {
 		cat.setGroom("No");
 		cat.setVet("Yes");
 		cat.setBreed("No");
+		CP3.setPrice(10);
+		CS2.setPrice(30);
+		
+		sum_C = CP3.getPrice() + CS2.getPrice();
+		
+		sum_Total = sum_D + sum_C;
+		
+		System.out.println("\n");
 		
 		System.out.println("Dog Size : " + Dogg.getSize());		
 		System.out.println("Dog Product - Food: " + Dogg.getFood());
@@ -57,7 +67,9 @@ public class Main {
 		System.out.println("Dog Service - Groom: " + dog.getGroom());
 		System.out.println("            - Vet: " + dog.getVet());
 		System.out.println("            - Breed: " + dog.getBreed());
-		
+		System.out.println("Total Dog Product: " + DP3.getPrice());
+		System.out.println("Total Dog Service: " + DS1.getPrice());
+		System.out.println("Total Dog Product & Service: " + sum_D);		
 		
 		System.out.println("\n");
 		
@@ -67,6 +79,13 @@ public class Main {
 		System.out.println("Cat Service - Groom: " + cat.getGroom());
 		System.out.println("            - Vet: " + cat.getVet());
 		System.out.println("            - Breed: " + cat.getBreed());
+		System.out.println("Total Cat Product: " + CP3.getPrice());
+		System.out.println("Total Cat Service: " + CS2.getPrice());
+		System.out.println("Total Cat Product & Service: " + sum_C);
+		
+		System.out.println("\n");
+		
+		System.out.println("Total Price: " + sum_Total);
 		
 	}
 
