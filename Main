@@ -1,13 +1,20 @@
+import static javax.swing.JOptionPane.*;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		String name;
 		Dogg Dogg = new Dogg();
 		Catt Catt = new Catt();
 		Service dog = new Service();
 		Service cat =new Service();
+		
+		name = showInputDialog("Enter your name:");
+		showMessageDialog(null, "Hi " + name);
+		System.out.println("Customer name: " + name);
+		
 		
 		Dogg.setSize("Medium");
 		Dogg.setFood("No");
