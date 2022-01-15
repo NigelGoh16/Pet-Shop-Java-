@@ -5,18 +5,22 @@ public class Dogg extends Product{
 	private String Size;
 	private String Fetch;
 	private Service dog;
+	private double Price;
 	
 	public Dogg() {
 		Size = "S";
 		Fetch = "f";
+		Price = 00.00;
 		//dog = "d";
 	}
 	
-	public Dogg(String B, String F, String S, String f, Service d) {
+	public Dogg(String B, String F, String S, String f, double P, Service d) {
 		super(B, F);
 		Size = S;
 		Fetch = f;
+		Price = P;
 		dog = d;
+		
 	}
 	
 	public String getSize() {
@@ -33,6 +37,14 @@ public class Dogg extends Product{
 	
 	public void setFetch(String f) {
 		Fetch = f;
+	}
+	
+	public double getPrice() {
+		return Price;
+	}
+	
+	public void setPrice(double P) {
+		Price = P;
 	}
 	
 	public String getdog() {
