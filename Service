@@ -1,0 +1,44 @@
+
+public class Service {
+	// TODO Auto-generated method stub
+	
+	private String Groom;
+	private String Vet;
+	private String Breed;
+	
+	public Service() {
+		Groom = "G";
+		Vet = "V";
+		Breed = "B";
+	}
+	
+	public Service(String G, String V, String B) {
+		Groom = G;
+		Vet = V;
+		Breed = B;
+	}
+	
+	public String getGroom() {
+		return Groom;
+	}
+	
+	public void setGroom(String G) {
+		Groom = G;
+	}
+	
+	public String getVet() {
+		return Vet;
+	}
+	
+	public void setVet(String V) {
+		Vet = V;
+	}
+	
+	public String getBreed() {
+		return Breed;
+	}
+	
+	public void setBreed(String B) {
+		Breed = B;
+	}
+}
