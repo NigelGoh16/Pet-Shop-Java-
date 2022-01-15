@@ -1,0 +1,33 @@
+public class Catt extends Product{
+	private Boolean Toy;
+	private Service cat;
+	private double Price;		
+
+		public Catt(Boolean Food, Boolean Bowl, Boolean T, double P, Service c) {
+			super(Food, Bowl);
+			this.Toy = T;
+			this.Price = P;
+			this.cat = c;
+		}
+		
+		public Boolean Toy() {
+			return Toy;
+		}
+		
+		public void setToy(Boolean T) {
+			this.Toy = T;
+		}
+		
+		
+		public double getPrice() {
+			return Price;
+		}
+		
+		public void setPrice(double P) {
+			this.Price = P;
+		}
+		
+		public String getcat() {
+			return cat.Breeding() + "/" + cat.Veterinary() + "/" + cat.Grooming();
+		}
+}
