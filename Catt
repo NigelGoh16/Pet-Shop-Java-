@@ -1,0 +1,30 @@
+
+public class Catt extends Product{
+	// TODO Auto-generated method stub
+	
+		private String Toy;
+		private Service cat;
+		
+		public Catt() {
+			Toy = "T";
+			//cat = "c";
+		}
+		
+		public Catt(String B, String F, String T, Service c) {
+			super(B, F);
+			Toy = T;
+			cat = c;
+		}
+		
+		public String getToy() {
+			return Toy;
+		}
+		
+		public void setToy(String T) {
+			Toy = T;
+		}
+		
+		public String getcat() {
+			return cat.getGroom() + "/" + cat.getVet() + "/" + cat.getBreed();
+		}
+}
