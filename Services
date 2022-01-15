@@ -1,0 +1,35 @@
+public class Service {
+	private Boolean Grooming;
+	private Boolean Veterinary;
+	private Boolean Breeding;
+	
+	public Service(Boolean Breeding, Boolean Veterinary, Boolean Grooming) {
+		this.Breeding= Breeding;
+		this.Veterinary= Veterinary;
+		this.Grooming= Grooming;
+	}
+	
+	public Boolean Breeding() {
+		return Breeding;
+	}
+	
+	public void setBreeding(Boolean Breeding) {
+		this.Breeding= Breeding;
+	}
+	
+	public Boolean Veterinary() {
+		return Veterinary;
+	}
+	
+	public void setVeterinary(Boolean Veterinary) {
+		this.Veterinary= Veterinary;
+	}
+	
+	public Boolean Grooming() {
+		return Grooming;
+	}
+	
+	public void setGrooming(Boolean Grooming) {
+		this.Grooming= Grooming;
+	}
+}
