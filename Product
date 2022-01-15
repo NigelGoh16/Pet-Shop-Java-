@@ -1,0 +1,31 @@
+public class Product {
+	// TODO Auto-generated method stub
+	private String Food;
+	private String Bowl;
+	
+	public Product() {
+		Food = "F";
+		Bowl = "B";
+	}
+	
+	public Product(String F, String B) {
+		Food = F;
+		Bowl = B;
+	}
+	
+	public String getFood() {
+		return Food;
+	}
+	
+	public void setFood(String F) {
+		Food = F;
+	}
+	
+	public String getBowl() {
+		return Bowl;
+	}
+	
+	public void setBowl(String B) {
+		Bowl = B;
+	}
+}
