@@ -1,0 +1,25 @@
+public class Product {
+	private Boolean Food;
+	private Boolean Bowl;
+	
+	public Product(Boolean Food, Boolean Bowl) {
+		this.Food= Food;
+		this.Bowl= Bowl;
+	}
+
+	public Boolean Food() {
+		return Food;
+	}
+	
+	public void setFood(Boolean Food) {
+		this.Food= Food;
+	}
+	
+	public Boolean Bowl() {
+		return Bowl;
+	}
+	
+	public void setBowl(Boolean Bowl) {
+		this.Bowl= Bowl;
+	}
+}
