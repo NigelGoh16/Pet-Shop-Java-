@@ -67,9 +67,9 @@ public class Main {
 		System.out.println("Dog Service - Groom: " + dog.getGroom());
 		System.out.println("            - Vet: " + dog.getVet());
 		System.out.println("            - Breed: " + dog.getBreed());
-		System.out.println("Total Dog Product: " + DP3.getPrice());
-		System.out.println("Total Dog Service: " + DS1.getPrice());
-		System.out.println("Total Dog Product & Service: " + sum_D);		
+		System.out.println("Total Dog Product: $" + DP3.getPrice());
+		System.out.println("Total Dog Service: $" + DS1.getPrice());
+		System.out.println("Total Dog Product & Service: $" + sum_D);		
 		
 		System.out.println("\n");
 		
@@ -79,14 +79,15 @@ public class Main {
 		System.out.println("Cat Service - Groom: " + cat.getGroom());
 		System.out.println("            - Vet: " + cat.getVet());
 		System.out.println("            - Breed: " + cat.getBreed());
-		System.out.println("Total Cat Product: " + CP3.getPrice());
-		System.out.println("Total Cat Service: " + CS2.getPrice());
-		System.out.println("Total Cat Product & Service: " + sum_C);
+		System.out.println("Total Cat Product: $" + CP3.getPrice());
+		System.out.println("Total Cat Service: $" + CS2.getPrice());
+		System.out.println("Total Cat Product & Service: $" + sum_C);
 		
 		System.out.println("\n");
 		
-		System.out.println("Total Price: " + sum_Total);
+		System.out.println("Total Price: $" + sum_Total);
 		
 	}
 
 }
+
