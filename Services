@@ -1,35 +1,18 @@
 public class Service {
-	private Boolean Grooming;
-	private Boolean Veterinary;
-	private Boolean Breeding;
+	private String ServiceName;
+	private double ServicePrice;
 	
-	public Service(Boolean Breeding, Boolean Veterinary, Boolean Grooming) {
-		this.Breeding= Breeding;
-		this.Veterinary= Veterinary;
-		this.Grooming= Grooming;
+	public Service(String sn, double sp) {
+		this.ServiceName= sn;
+		this.ServicePrice= sp;
 	}
 	
-	public Boolean Breeding() {
-		return Breeding;
+	public String getServiceName() {
+		return ServiceName;
 	}
 	
-	public void setBreeding(Boolean Breeding) {
-		this.Breeding= Breeding;
+	public double getServicePrice() {
+		return ServicePrice;
 	}
 	
-	public Boolean Veterinary() {
-		return Veterinary;
-	}
-	
-	public void setVeterinary(Boolean Veterinary) {
-		this.Veterinary= Veterinary;
-	}
-	
-	public Boolean Grooming() {
-		return Grooming;
-	}
-	
-	public void setGrooming(Boolean Grooming) {
-		this.Grooming= Grooming;
-	}
 }
