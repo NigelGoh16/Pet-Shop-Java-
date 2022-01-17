@@ -1,25 +1,18 @@
 public class Product {
-	private Boolean Food;
-	private Boolean Bowl;
+	private String ProductName;
+	private double ProductPrice;
 	
-	public Product(Boolean Food, Boolean Bowl) {
-		this.Food= Food;
-		this.Bowl= Bowl;
+	public Product(String pn, double pp) {
+		ProductName= pn;
+		ProductPrice= pp;
 	}
 
-	public Boolean Food() {
-		return Food;
+	public String getProductName() {
+		return ProductName;
 	}
 	
-	public void setFood(Boolean Food) {
-		this.Food= Food;
+	public double getProductPrice() {
+		return ProductPrice;
 	}
 	
-	public Boolean Bowl() {
-		return Bowl;
-	}
-	
-	public void setBowl(Boolean Bowl) {
-		this.Bowl= Bowl;
-	}
 }
