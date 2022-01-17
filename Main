@@ -6,82 +6,74 @@ public class Main {
 
 	public static void main(String[] args) {		
 		String name;
+		double sum_ds;
+		double sum_dp;
 		double sum_D;
+		double sum_cs;
+		double sum_cp;
 		double sum_C;
 		double sum_Total;
 		
-		Dogg d1 = new Dogg("S",true, false, true);
-		Service ds1= new Service(true,false,false);
-		Dogg DP3 = new Dogg();
-		Dogg DS1 = new Dogg();
-		//Dogg DS2 = new Dogg();
-		//Dogg DS3 = new Dogg();
-		Service dog = new Service();
+		Service s1= new Service("Breeding", 180.00);
+		Service s2= new Service("Veterinary", 85.00);
+		Service s3= new Service("Grooming",100.00);
+		Product p1= new Product("Food", 58.00);
+		Product p2= new Product("Bowl", 18.00);
 		
-		Catt c = new Catt();
-		Service cs1= new Service(false,true,false);		
-		Catt CP3 = new Catt();		
-		//Catt CS1 = new Catt();		
-		Catt CS2 = new Catt();		
-		//Catt CS3 = new Catt();	
-		Service cat =new Service();
+		Dogg D1 = new Dogg("Small", s1, "Food", 58.00, "Fetch", 12.00);
+		Dogg D2 = new Dogg("Medium", s2, "Bowl", 18.00, "Fetch", 12.00);
+		Dogg D3 = new Dogg("Large", s3, "Food", 58.00, "Fetch", 12.00);
+		
+		Catt C1 = new Catt("Default", s1, "Food", 58.00, "Toy", 12.00);
+		Catt C2 = new Catt("Default", s2, "Bowl", 18.00, "Toy", 12.00);
+		Catt C3 = new Catt("Default", s3, "Food", 58.00, "Toy", 12.00);
 				
 				
 		name = showInputDialog("Enter your name:");
 		showMessageDialog(null, "Welcome " + name);
 		System.out.println("Customer name: " + name);
+
+		
+		System.out.println("\n");
+		
+		sum_ds= s1.getServicePrice()+ s3.getServicePrice();
+		sum_dp= p1.getProductPrice()+ p2.getProductPrice();
+		sum_D = sum_ds + sum_dp;
+		
+		System.out.println("Dog Size 		: " + D1.getSize());		
+		System.out.println("Dog Product 		- " + p1.getProductName());
+		System.out.println("            		- " + p2.getProductName());
+		System.out.println("            		- " + D1.getDProduct()+"\n");
+		System.out.println("Dog Service 		- " + s1.getServiceName());
+		System.out.println("            		- " + s2.getServiceName());
+		System.out.println("            		- " + s3.getServiceName()+"\n");
+		System.out.println("Total Dog Service 			= $" + sum_ds);
+		System.out.println("Total Dog Product 			= $" + sum_dp);
+		System.out.println("Total Dog Product & Service 		= $" + sum_D);		
+		
+		sum_cs= s1.getServicePrice()+ s2.getServicePrice();
+		sum_cp= p1.getProductPrice()+ p2.getProductPrice();
+		sum_C = sum_cs + sum_cp;
+		
+		System.out.println("\n");
+		
+		System.out.println("Cat Size 		: " + C1.getSize());
+		System.out.println("Cat Product 		- " + p1.getProductName());
+		System.out.println("            		- " + p2.getProductName());
+		System.out.println("            		- " + C1.getCProduct()+"\n");
+		System.out.println("Cat Service 		- " + s1.getServiceName());
+		System.out.println("            		- " + s2.getServiceName());
+		System.out.println("            		- " + s3.getServiceName()+"\n");
+		System.out.println("Total Cat Service			= $" + sum_cs);
+		System.out.println("Total Cat Product			= $" + sum_cp);
+		System.out.println("Total Cat Product & Service 		= $" + sum_C);
 		
 		
-		d.setSize("Medium");
-		d.setFood(true);
-		d.setBowl(false);
-		d.setFetch(true);
-		DP3.setPrice(10);
-		DS1.setPrice(50);
-		
-		sum_D = DP3.getPrice() + DS1.getPrice();
-		
-		c.setFood(false);
-		c.setBowl(false);
-		c.setToy(true);
-		cat.setBreeding(false);
-		cat.setVeterinary(true);
-		cat.setGrooming(false);
-		CP3.setPrice(10);
-		CS2.setPrice(30);
-		
-		sum_C = CP3.getPrice() + CS2.getPrice();
+		System.out.println("\n");
 		
 		sum_Total = sum_D + sum_C;
 		
-		System.out.println("\n");
-		
-		System.out.println("Dog Size : " + d1.getSize());		
-		System.out.println("Dog Product - Food: " + d1.Food());
-		System.out.println("            - Bowl: " + d1.Bowl());
-		System.out.println("            - Fetch: " + d1.Fetch());
-		System.out.println("Dog Service - Groom: " + ds1.Breeding());
-		System.out.println("            - Vet: " + ds1.Veterinary());
-		System.out.println("            - Breed: " + ds1.Grooming());
-		System.out.println("Total Dog Product: $" + DP3.getPrice());
-		System.out.println("Total Dog Service: $" + DS1.getPrice());
-		System.out.println("Total Dog Product & Service: $" + sum_D);		
-		
-		System.out.println("\n");
-		
-		System.out.println("Cat Product - Food: " + c.Food());
-		System.out.println("            - Bowl: " + c.Bowl());
-		System.out.println("            - Toy: " + c.Toy());
-		System.out.println("Cat Service - Groom: " + cs1.Breeding());
-		System.out.println("            - Vet: " + cs1.Veterinary());
-		System.out.println("            - Breed: " + cs1.Grooming());
-		System.out.println("Total Cat Product: $" + CP3.getPrice());
-		System.out.println("Total Cat Service: $" + CS2.getPrice());
-		System.out.println("Total Cat Product & Service: $" + sum_C);
-		
-		System.out.println("\n");
-		
-		System.out.println("Total Price: $" + sum_Total);
+		System.out.println("Total Price= $" + sum_Total);
 		
 	}
 
