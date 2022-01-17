@@ -1,33 +1,30 @@
 public class Catt extends Product{
-	private Boolean Toy;
+	private String Size;
+	private String CProduct;
 	private Service cat;
 	private double Price;		
 
-		public Catt(Boolean Food, Boolean Bowl, Boolean T, double P, Service c) {
-			super(Food, Bowl);
-			this.Toy = T;
-			this.Price = P;
-			this.cat = c;
+		public Catt(String cs, Service c, String pn, double pp, String cp, double P) {
+			super(pn, pp);
+			Size= cs;
+			CProduct= cp;
+			Price = P;
+			cat = c;
 		}
 		
-		public Boolean Toy() {
-			return Toy;
+		public String getSize() {
+			return Size;
 		}
 		
-		public void setToy(Boolean T) {
-			this.Toy = T;
+		public String getCProduct() {
+			return CProduct;
 		}
-		
 		
 		public double getPrice() {
 			return Price;
 		}
 		
-		public void setPrice(double P) {
-			this.Price = P;
-		}
-		
-		public String getcat() {
-			return cat.Breeding() + "/" + cat.Veterinary() + "/" + cat.Grooming();
+		public Service getCat() {
+			return cat;
 		}
 }
