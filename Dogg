@@ -1,41 +1,30 @@
 public class Dogg extends Product{	
 	private String Size;
-	private Boolean Fetch;
-	private Service dog;
+	private String DProduct;
+	private Service service;
 	private double Price;
 	
-	public Dogg(String S, Boolean Food, Boolean Bowl,  Boolean f, Service d, double P) {
-		super(Food, Bowl);
-		this.Size = S;
-		this.Fetch = f;
-		this.Price = P;
+	public Dogg(String S, Service ds, String pn, double pp, String dp, double P) {
+		super(pn,pp);
+		Size = S;
+		DProduct = dp;
+		Price = P;
+		service= ds;
 	}
 	
 	public String getSize() {
 		return Size;
 	}
 	
-	public void setSize(String S) {
-		this.Size = S;
-	}
-	
-	public Boolean Fetch() {
-		return Fetch;
-	}
-	
-	public void setFetch(Boolean f) {
-		this.Fetch = f;
+	public String getDProduct() {
+		return DProduct;
 	}
 	
 	public double getPrice() {
 		return Price;
 	}
 	
-	public void setPrice(double P) {
-		this.Price = P;
-	}
-	
-	public String getdog() {
-		return dog.Breeding() + "/" + dog.Veterinary() + "/" + dog.Grooming();
+	public Service getService() {
+		return service;
 	}
 }
