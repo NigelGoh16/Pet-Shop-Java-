@@ -1,11 +1,12 @@
+package Joen;
 
 import java.text.DecimalFormat;
 
 
-public class PetShop extends javax.swing.JFrame {
-
-    
-    public PetShop() {
+public class GUI extends javax.swing.JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	public GUI() {
         initComponents();
     }
 
@@ -47,14 +48,14 @@ public class PetShop extends javax.swing.JFrame {
         TotalLabel = new javax.swing.JLabel();
         ClearButton = new javax.swing.JButton();
         CalculateButton = new javax.swing.JButton();
-        ExitButton = new javax.swing.JButton();
+        BuyButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        PetShop.setFont(new java.awt.Font("Lao MN", 1, 18)); // NOI18N
-        PetShop.setText("Pet Shop");
+        PetShop.setFont(new java.awt.Font("Lao MN", 1, 18)); 
+        PetShop.setText("Happy Paws");
 
-        DogServices.setFont(new java.awt.Font("Lao MN", 1, 15)); // NOI18N
+        DogServices.setFont(new java.awt.Font("Lao MN", 1, 15)); 
         DogServices.setText("Dog Services");
 
         DogBreed.setText("Breeding RM50.00");
@@ -78,7 +79,7 @@ public class PetShop extends javax.swing.JFrame {
             }
         });
 
-        DogSection.setFont(new java.awt.Font("Lao MN", 1, 18)); // NOI18N
+        DogSection.setFont(new java.awt.Font("Lao MN", 1, 18)); 
         DogSection.setText("Dog Section");
 
         DogFood.setText("Food RM15.00");
@@ -89,6 +90,11 @@ public class PetShop extends javax.swing.JFrame {
         });
 
         DogBowl.setText("Bowl RM20.00");
+        DogBowl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DogBowlActionPerformed(evt);
+            }
+        });
 
         DogFetch.setText("Fetch RM10.00");
         DogFetch.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +103,7 @@ public class PetShop extends javax.swing.JFrame {
             }
         });
 
-        DogProduct.setFont(new java.awt.Font("Lao MN", 1, 15)); // NOI18N
+        DogProduct.setFont(new java.awt.Font("Lao MN", 1, 15)); 
         DogProduct.setText("Dog Product");
 
         DogSizeBig.setText("Big");
@@ -121,10 +127,10 @@ public class PetShop extends javax.swing.JFrame {
             }
         });
 
-        DogSize.setFont(new java.awt.Font("Lao MN", 1, 15)); // NOI18N
+        DogSize.setFont(new java.awt.Font("Lao MN", 1, 15)); 
         DogSize.setText("Dog Size");
 
-        CatSize.setFont(new java.awt.Font("Lao MN", 1, 15)); // NOI18N
+        CatSize.setFont(new java.awt.Font("Lao MN", 1, 15)); 
         CatSize.setText("Cat Size");
 
         CatBreed.setText("Breeding RM50.00");
@@ -135,6 +141,11 @@ public class PetShop extends javax.swing.JFrame {
         });
 
         CatVet.setText("Veterinary RM30.00");
+        CatVet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CatVetActionPerformed(evt);
+            }
+        });
 
         CatGroom.setText("Grooming RM10.00");
         CatGroom.addActionListener(new java.awt.event.ActionListener() {
@@ -154,6 +165,11 @@ public class PetShop extends javax.swing.JFrame {
         });
 
         CatBowl.setText("Bowl RM20.00");
+        CatBowl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CatBowlActionPerformed(evt);
+            }
+        });
 
         CatToy.setText("Toy RM10.00");
         CatToy.addActionListener(new java.awt.event.ActionListener() {
@@ -162,18 +178,13 @@ public class PetShop extends javax.swing.JFrame {
             }
         });
 
-        CatServices.setFont(new java.awt.Font("Lao MN", 1, 15)); // NOI18N
+        CatServices.setFont(new java.awt.Font("Lao MN", 1, 15)); 
         CatServices.setText("Cat Services");
 
-        CatProduct.setFont(new java.awt.Font("Lao MN", 1, 15)); // NOI18N
+        CatProduct.setFont(new java.awt.Font("Lao MN", 1, 15)); 
         CatProduct.setText("Cat Product");
 
         CatSizeDefault.setText("Default");
-        CatSizeDefault.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CatSizeDefaultActionPerformed(evt);
-            }
-        });
 
         jScrollPane1.setViewportView(SubtotalButton);
 
@@ -201,10 +212,10 @@ public class PetShop extends javax.swing.JFrame {
             }
         });
 
-        ExitButton.setText("Exit");
-        ExitButton.addActionListener(new java.awt.event.ActionListener() {
+        BuyButton.setText("Buy");
+        BuyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExitButtonActionPerformed(evt);
+                BuyButtonActionPerformed(evt);
             }
         });
 
@@ -281,7 +292,7 @@ public class PetShop extends javax.swing.JFrame {
                                 .addComponent(ClearButton)
                                 .addGap(35, 35, 35)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ExitButton)
+                            .addComponent(BuyButton)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(87, 87, 87))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -369,7 +380,7 @@ public class PetShop extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ClearButton)
-                            .addComponent(ExitButton))
+                            .addComponent(BuyButton))
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -380,115 +391,204 @@ public class PetShop extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
+    
+    private double subtotal=0.00;
+    DecimalFormat df = new DecimalFormat("0.00");
+    Service s = new Service(10, 30, 50);
+    Dogg d1 = new Dogg(s,15,20,10,10);
+    Catt c1 = new Catt(s,15,20,10,10);
+    
+    private void DogBreedActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==DogBreed) {
+    		if (DogBreed.isSelected()) {
+    			subtotal = subtotal + d1.getBreed();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - d1.getBreed();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
+    
+    private void DogVetActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==DogVet) {
+    		if (DogVet.isSelected()) {
+    			subtotal = subtotal + d1.getVet();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - d1.getVet();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
 
-    private void DogBreedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DogBreedActionPerformed
-        // select Dog Breed 
-       
-        
-    }//GEN-LAST:event_DogBreedActionPerformed
+    private void DogGroomActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==DogGroom) {
+    		if (DogBreed.isSelected()) {
+    			subtotal = subtotal + d1.getGroom();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - d1.getGroom();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
 
-    private void DogGroomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DogGroomActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_DogGroomActionPerformed
+    private void DogFoodActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==DogFood) {
+    		if (DogFood.isSelected()) {
+    			subtotal = subtotal + d1.getFood();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - d1.getFood();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
+    
+    private void DogBowlActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==DogBowl) {
+    		if (DogBreed.isSelected()) {
+    			subtotal = subtotal + d1.getBowl();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - d1.getBowl();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
 
-    private void DogFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DogFoodActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DogFoodActionPerformed
+    private void DogFetchActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==DogFetch) {
+    		if (DogFetch.isSelected()) {
+    			subtotal = subtotal + d1.getFetch();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - d1.getFetch();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
 
-    private void DogFetchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DogFetchActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DogFetchActionPerformed
-
-    private void DogSizeBigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DogSizeBigActionPerformed
-        // select big dog
+    private void DogSizeBigActionPerformed(java.awt.event.ActionEvent evt) {
         if (DogSizeBig.isSelected())
             DogSizeMedium.setSelected(false);
             DogSizeSmall.setSelected(false);
-    }//GEN-LAST:event_DogSizeBigActionPerformed
-
-    private void DogSizeSmallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DogSizeSmallActionPerformed
-           //select small dog
-        if (DogSizeSmall.isSelected())
-            DogSizeMedium.setSelected(false);
-            DogSizeBig.setSelected(false);
-        
-    }//GEN-LAST:event_DogSizeSmallActionPerformed
-
-    private void CatBreedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CatBreedActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CatBreedActionPerformed
-
-    private void CatGroomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CatGroomActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CatGroomActionPerformed
-
-    private void CatFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CatFoodActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CatFoodActionPerformed
-
-    private void CatToyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CatToyActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CatToyActionPerformed
-
-    private void CatSizeDefaultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CatSizeDefaultActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CatSizeDefaultActionPerformed
-
-    private void DogSizeMediumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DogSizeMediumActionPerformed
-        // select medium dog
+    }
+    
+    private void DogSizeMediumActionPerformed(java.awt.event.ActionEvent evt) {
         if (DogSizeMedium.isSelected())
             DogSizeBig.setSelected(false);
             DogSizeSmall.setSelected(false);
-    }//GEN-LAST:event_DogSizeMediumActionPerformed
+    }
 
-    private void CalculateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculateButtonActionPerformed
-        // 
-        DecimalFormat df = new DecimalFormat("0.00");
-        double total;
-        double subtotal=0.00;
+    private void DogSizeSmallActionPerformed(java.awt.event.ActionEvent evt) {
+        if (DogSizeSmall.isSelected())
+            DogSizeMedium.setSelected(false);
+            DogSizeBig.setSelected(false);  
+    }
+
+    private void CatBreedActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==CatBreed) {
+    		if (CatBreed.isSelected()) {
+    			subtotal = subtotal + c1.getBreed();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - c1.getBreed();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
+
+    private void CatVetActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==CatVet) {
+    		if (CatVet.isSelected()) {
+    			subtotal = subtotal + c1.getVet();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - c1.getVet();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
+    
+    private void CatGroomActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==CatGroom) {
+    		if (CatGroom.isSelected()) {
+    			subtotal = subtotal + c1.getGroom();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - c1.getGroom();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
+
+    private void CatFoodActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==CatFood) {
+    		if (CatFood.isSelected()) {
+    			subtotal = subtotal + c1.getFood();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - c1.getFood();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
+    
+    private void CatBowlActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==CatBowl) {
+    		if (CatBowl.isSelected()) {
+    			subtotal = subtotal + c1.getBowl();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - c1.getBowl();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
+
+    private void CatToyActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==CatToy) {
+    		if (CatToy.isSelected()) {
+    			subtotal = subtotal + c1.getToy();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    	        SubtotalButton.setText(df.format(subtotal));
+    		}
+    		else {
+    			subtotal = subtotal - c1.getToy();
+    			SubtotalButton.setText(Double.toString(subtotal));
+    		}
+    	}
+    }
+
+    private void CalculateButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        double total, tax;
         final double TAXRATE = .06;
-        double tax;
-        
-        if(DogBreed.isSelected()){
-            subtotal = subtotal +50;
-        }
-        if(DogVet.isSelected()){
-            subtotal = subtotal +30;
-        }
-        if(DogGroom.isSelected()){
-            subtotal = subtotal +10;
-        }
-        
-        if(DogFood.isSelected()){
-            subtotal = subtotal +15;
-        }
-        if(DogBowl.isSelected()){
-            subtotal = subtotal +20;
-        }
-        if(DogFetch.isSelected()){
-            subtotal = subtotal +10;
-        }
-        if(CatBreed.isSelected()){
-            subtotal = subtotal +50;
-        }
-        if(CatVet.isSelected()){
-            subtotal = subtotal +30;
-        }
-        if(CatGroom.isSelected()){
-            subtotal = subtotal +10;
-        }
-        if(CatFood.isSelected()){
-            subtotal = subtotal +15;
-        }
-        if(CatBowl.isSelected()){
-            subtotal = subtotal +20;
-        }
-        if(CatToy.isSelected()){
-            subtotal = subtotal +10;
-        }
-        
+
         SubtotalButton.setText(Double.toString(subtotal));
         SubtotalButton.setText(df.format(subtotal));
         
@@ -501,21 +601,15 @@ public class PetShop extends javax.swing.JFrame {
         
         TaxButton.setText(df.format(tax));
         TotalDisplayBox.setText(df.format(total));
-    }//GEN-LAST:event_CalculateButtonActionPerformed
+    }
+    
+    private void BuyButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==BuyButton) {
+    		new CheckOut().setVisible(true);
+    	}
+    }
 
-    private void DogVetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DogVetActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_DogVetActionPerformed
-
-    private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
-       //exits the program
-        System.exit(0);
-        
-    }//GEN-LAST:event_ExitButtonActionPerformed
-
-    private void ClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearButtonActionPerformed
-        //clear the selected fields
+    private void ClearButtonActionPerformed(java.awt.event.ActionEvent evt) {
         DogSizeBig.setSelected(false);
         DogSizeMedium.setSelected(false);
         DogSizeSmall.setSelected(false);
@@ -538,39 +632,12 @@ public class PetShop extends javax.swing.JFrame {
         CatToy.setSelected(false);
         CatBowl.setSelected(false);
         
-       
-    }//event_ClearButtonActionPerformed
-
-    //main method
-    public static void main(String args[]) {
-        
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PetShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PetShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PetShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PetShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new PetShop().setVisible(true);
-            }
-        });
+        SubtotalButton.setText("");
+        TotalDisplayBox.setText("");
+        TaxButton.setText("");
+        subtotal = 0.00;
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CalculateButton;
     private javax.swing.JRadioButton CatBowl;
     private javax.swing.JRadioButton CatBreed;
@@ -597,7 +664,7 @@ public class PetShop extends javax.swing.JFrame {
     private javax.swing.JRadioButton DogSizeMedium;
     private javax.swing.JRadioButton DogSizeSmall;
     private javax.swing.JRadioButton DogVet;
-    private javax.swing.JButton ExitButton;
+    private javax.swing.JButton BuyButton;
     private javax.swing.JLabel PetShop;
     private javax.swing.JTextPane SubtotalButton;
     private javax.swing.JLabel SubtotalLabel;
@@ -608,5 +675,4 @@ public class PetShop extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    // End of variables declaration//GEN-END:variables
 }
