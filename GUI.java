@@ -48,12 +48,12 @@ public class GUI extends javax.swing.JFrame {
         TotalLabel = new javax.swing.JLabel();
         ClearButton = new javax.swing.JButton();
         CalculateButton = new javax.swing.JButton();
-        ExitButton = new javax.swing.JButton();
+        BuyButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PetShop.setFont(new java.awt.Font("Lao MN", 1, 18)); 
-        PetShop.setText("Pet Shop");
+        PetShop.setText("Happy Paws");
 
         DogServices.setFont(new java.awt.Font("Lao MN", 1, 15)); 
         DogServices.setText("Dog Services");
@@ -178,18 +178,13 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        CatServices.setFont(new java.awt.Font("Lao MN", 1, 15)); // NOI18N
+        CatServices.setFont(new java.awt.Font("Lao MN", 1, 15)); 
         CatServices.setText("Cat Services");
 
-        CatProduct.setFont(new java.awt.Font("Lao MN", 1, 15)); // NOI18N
+        CatProduct.setFont(new java.awt.Font("Lao MN", 1, 15)); 
         CatProduct.setText("Cat Product");
 
         CatSizeDefault.setText("Default");
-        CatSizeDefault.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CatSizeDefaultActionPerformed(evt);
-            }
-        });
 
         jScrollPane1.setViewportView(SubtotalButton);
 
@@ -217,10 +212,10 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        ExitButton.setText("Exit");
-        ExitButton.addActionListener(new java.awt.event.ActionListener() {
+        BuyButton.setText("Buy");
+        BuyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExitButtonActionPerformed(evt);
+                BuyButtonActionPerformed(evt);
             }
         });
 
@@ -297,7 +292,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(ClearButton)
                                 .addGap(35, 35, 35)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ExitButton)
+                            .addComponent(BuyButton)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(87, 87, 87))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -385,7 +380,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ClearButton)
-                            .addComponent(ExitButton))
+                            .addComponent(BuyButton))
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -590,9 +585,6 @@ public class GUI extends javax.swing.JFrame {
     	}
     }
 
-    private void CatSizeDefaultActionPerformed(java.awt.event.ActionEvent evt) {
-    }
-
     private void CalculateButtonActionPerformed(java.awt.event.ActionEvent evt) {
         double total, tax;
         final double TAXRATE = .06;
@@ -611,8 +603,10 @@ public class GUI extends javax.swing.JFrame {
         TotalDisplayBox.setText(df.format(total));
     }
     
-    private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        System.exit(0);
+    private void BuyButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(evt.getSource()==BuyButton) {
+    		new CheckOut().setVisible(true);
+    	}
     }
 
     private void ClearButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -641,6 +635,7 @@ public class GUI extends javax.swing.JFrame {
         SubtotalButton.setText("");
         TotalDisplayBox.setText("");
         TaxButton.setText("");
+        subtotal = 0.00;
     }
 
     private javax.swing.JButton CalculateButton;
@@ -669,7 +664,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JRadioButton DogSizeMedium;
     private javax.swing.JRadioButton DogSizeSmall;
     private javax.swing.JRadioButton DogVet;
-    private javax.swing.JButton ExitButton;
+    private javax.swing.JButton BuyButton;
     private javax.swing.JLabel PetShop;
     private javax.swing.JTextPane SubtotalButton;
     private javax.swing.JLabel SubtotalLabel;

@@ -19,10 +19,10 @@ public class Main {
 	            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 	        }
 
-	        java.awt.EventQueue.invokeLater(new Runnable() {
-	            public void run() {
-	                new GUI().setVisible(true);
-	            }
-	        });
+		    java.awt.EventQueue.invokeLater(new Runnable() {
+		    	public void run() {
+		    		new CheckIn().setVisible(true);
+		        }
+		    });
 	}
 }
